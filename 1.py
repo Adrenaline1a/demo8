@@ -36,5 +36,4 @@ for key, value in list(school.items()):
     s = int(value)
     summ = s + summ
     print("Класс: ", key, " - количество учащихся: ", value)
-
 print('Общее количество учащихся в школе: ', summ)
