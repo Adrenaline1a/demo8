@@ -1,4 +1,5 @@
 flot = []
+print('Список комманд: \n exit \n add \n list \n select')
 while True:
     com = input('Введите команду: ').lower()
     if com == 'exit':
@@ -22,8 +23,12 @@ while True:
                   reys.get('tip', ''))
     elif com == 'select':
         nom = input('Введите тип желаемого самолёта: ')
+        count = 0
         for i, num in enumerate(flot, 1):
             if nom == num.get('tip', ''):
+                count += 1
                 print("Тип: ", num.get('tip', ''), "\n", "Номер: ",
                       num.get('nomer', ''),
                       "\n", "Место прибытия: ", num.get('mesto', ''))
+        if count == 0:
+            print('Таких рейсов нет')
