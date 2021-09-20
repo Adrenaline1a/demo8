@@ -1,4 +1,8 @@
-school = {
+#!/usr/bin/env python3
+# -*- coding: utf-8 -*-
+
+if __name__ == '__main__':
+    school = {
     "1а": 30,
     "1б": 27,
     "2а": 28,
@@ -20,20 +24,20 @@ school = {
     "11а": 12,
     "11б": 10
 }
-for key, value in school.items():
-    print("Класс: ", key, " - количество учащихся: ", value)
-a = input('Введите название именяемого класса: ')
-a1 = int(input('Количество учеников изменяемого класса: '))
-b = input("Введите новый класс: ")
-b1 = int(input("Введите сколько новых учеников в классе: "))
-c = input('Введите класс, который был расформирован: ')
-del school[c]
-school.update({b: b1})
-summ = 0
-for key, value in list(school.items()):
-    if a == key:
-        value = a1
-    s = int(value)
-    summ = s + summ
-    print("Класс: ", key, " - количество учащихся: ", value)
-print('Общее количество учащихся в школе: ', summ)
+    for key, value in school.items():
+        print("Класс: ", key, " - количество учащихся: ", value)
+    a = input('Введите название именяемого класса: ')
+    a1 = int(input('Количество учеников изменяемого класса: '))
+    b = input("Введите новый класс: ")
+    b1 = int(input("Введите сколько новых учеников в классе: "))
+    c = input('Введите класс, который был расформирован: ')
+    del school[c]
+    school.update({b: b1})
+    summ = 0
+    for key, value in list(school.items()):
+        if a == key:
+            value = a1
+        s = int(value)
+        summ = s + summ
+        print("Класс: ", key, " - количество учащихся: ", value)
+    print('Общее количество учащихся в школе: ', summ)
