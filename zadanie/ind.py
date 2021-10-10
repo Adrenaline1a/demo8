@@ -1,6 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 
+import sys
+
 if __name__ == '__main__':
     flot = []
     print('Список комманд: \n exit \n add \n list \n select')
@@ -61,12 +63,13 @@ if __name__ == '__main__':
                     count += 1
                     print(
                         '| {:<4} | {:<20} | {:<15} | {:<16} |'.format(
-                        count,
-                        num.get('mesto', ''),
-                        num.get('nomer', ''),
-                        num.get('tip', 0)))
+                            count,
+                            num.get('mesto', ''),
+                            num.get('nomer', ''),
+                            num.get('tip', 0)))
             print(line)
             if count == 0:
                 print('Таких рейсов нет')
         else:
-            print(f"Неизвестная команда {command}", file=sys.stderr)
+            print(f"Неизвестная команда {com}", file=sys.stderr)
+
